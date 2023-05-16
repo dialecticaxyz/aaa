@@ -1,11 +1,8 @@
 //const url = "https://premaned-server.glitch.me"
 //const serverURL = 'wss://premaned-server.glitch.me';
-
-//const url = "https://zany-gold-dhole-wear.cyclic.app"
-//const serverURL = 'wss://zany-gold-dhole-wear.cyclic.app';
-
-const url = "http://127.0.0.1"
-const serverURL = 'ws://127.0.0.1';
+const url = location.href.split("/")[0]+"//"+location.href.split("/")[2]
+const serverURL = 'ws://'+location.href.split("/")[2];
+console.log({url,serverURL})
 const token = JSON.parse((localStorage.getItem("datUser")==null||localStorage.getItem("datUser")=="")?"{}":localStorage.getItem("datUser")).tkn
 //////////////////// SECION USER ////////////////////
 function createdUse(dat){
