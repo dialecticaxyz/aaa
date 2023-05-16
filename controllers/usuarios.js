@@ -1,7 +1,6 @@
 const Datastore = require('nedb');
 const use = new Datastore({filename:'./data/usuarios.dat', autoload: true});
 const bcrypt = require('bcryptjs');
-const sendCorreo = require("../correo/correo").sendCorreo
 const jwt = require('jsonwebtoken');
 const config = require('../config.js');
 
