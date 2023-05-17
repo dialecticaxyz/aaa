@@ -61,7 +61,7 @@ const updatePasword = async (req, res) => {
   const token = req.headers["x-access-token"];
   jwt.verify(token,config.SECRET, (err, decoded) => {
     if(err){
-      rsp.status(200).send("error")
+      req.status(200).send("error")
     }else{
       use.find({_id:decoded.id}, (err, record)=>{
         if(record.length!=0){
